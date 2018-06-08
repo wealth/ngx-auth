@@ -3,5 +3,5 @@ node_modules
 lib
 
 # temp
-dist
+# dist
 dist.tgz
