@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpRequest, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 /**
@@ -42,7 +42,7 @@ export abstract class AuthService {
    * Verify that outgoing request is refresh-token,
    * so interceptor won't intercept this request
    */
-  public abstract verifyTokenRequest(url: string): boolean;
+  public abstract verifyTokenRequest(req: HttpRequest<any>): boolean;
 
   /**
    * Add token to headers, dependent on server

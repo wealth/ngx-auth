@@ -60,7 +60,7 @@ export class AuthenticationService implements AuthService {
     return response.status === 401;
   }
 
-  public verifyTokenRequest(url: string): boolean {
+  public verifyTokenRequest(req: HttpRequest): boolean {
     return url.endsWith('refresh-token');
   }
 

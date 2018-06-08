@@ -2,7 +2,8 @@ import { TestBed, inject, fakeAsync, tick } from '@angular/core/testing';
 import {
   HttpClient,
   HTTP_INTERCEPTORS,
-  HttpErrorResponse
+  HttpErrorResponse,
+  HttpRequest
 } from '@angular/common/http';
 import {
   HttpClientTestingModule,
@@ -42,8 +43,8 @@ class AuthenticationServiceStub implements AuthService {
   refreshShouldHappen(e: HttpErrorResponse) {
     return e.status === 401;
   }
-  verifyTokenRequest(url: string) {
-    return url === TEST_REFRESH_URI;
+  verifyTokenRequest(req: HttpRequest<any>) {
+    return req.url === TEST_REFRESH_URI;
   }
 }
 

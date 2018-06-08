@@ -38,7 +38,7 @@ export class AuthInterceptor implements HttpInterceptor {
     const authService: AuthService =
       this.injector.get<AuthService>(AUTH_SERVICE);
 
-    if (authService.verifyTokenRequest(req.url)) {
+    if (authService.verifyTokenRequest(req)) {
       return delegate.handle(req);
     }
 
