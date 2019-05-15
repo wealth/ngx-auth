@@ -277,7 +277,7 @@ class AuthInterceptor {
             if (token) {
                 let /** @type {?} */ setHeaders;
                 if (typeof authService.getHeaders === 'function') {
-                    setHeaders = authService.getHeaders(token);
+                    setHeaders = authService.getHeaders(token, req);
                 }
                 else {
                     setHeaders = { Authorization: `Bearer ${token}` };

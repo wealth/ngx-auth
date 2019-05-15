@@ -123,7 +123,7 @@ export class AuthInterceptor implements HttpInterceptor {
             let setHeaders: { [name: string]: string | string[] };
 
             if (typeof authService.getHeaders === 'function') {
-              setHeaders = authService.getHeaders(token);
+              setHeaders = authService.getHeaders(token, req);
             } else {
               setHeaders = { Authorization: `Bearer ${token}` };
             }

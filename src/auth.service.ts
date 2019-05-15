@@ -51,5 +51,5 @@ export abstract class AuthService {
    *
    * To change behavior, override this method.
    */
-  public abstract getHeaders?(token: string): { [name: string]: string | string[] };
+  public abstract getHeaders?(token: string, req: HttpRequest<any>): { [name: string]: string | string[] };
 }

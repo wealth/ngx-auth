@@ -44,7 +44,7 @@ export declare abstract class AuthService {
      *
      * To change behavior, override this method.
      */
-    abstract getHeaders?(token: string): {
+    abstract getHeaders?(token: string, req: HttpRequest<any>): {
         [name: string]: string | string[];
     };
 }

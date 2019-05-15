@@ -13,6 +13,11 @@
   ],
   "author": "Serhii Sol",
   "license": "MIT",
+  "main": "bundles/ngx-auth.umd.js",
+  "module": "esm5/ngx-auth.js",
+  "es2015": "esm2015/ngx-auth.js",
+  "typings": "ngx-auth.d.ts",
+  "metadata": "ngx-auth.metadata.json",
   "peerDependencies": {
     "@angular/core": "^6.0.0",
     "@angular/common": "^6.0.0",
@@ -47,11 +52,6 @@
     "webpack-dev-server": "3.1.4",
     "zone.js": "^0.8.26"
   },
-  "main": "bundles/ngx-auth.umd.js",
-  "module": "esm5/ngx-auth.js",
-  "es2015": "esm2015/ngx-auth.js",
-  "typings": "ngx-auth.d.ts",
-  "metadata": "ngx-auth.metadata.json",
   "dependencies": {
     "tslib": "^1.9.0"
   }
